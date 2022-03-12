@@ -1,0 +1,43 @@
+<style>
+    *{
+        background-image: url("https://i.pinimg.com/originals/a1/0a/56/a10a56cb385d86c6bb9e54da08a947f0.jpg");
+    }
+</style>
+
+{% block content %}
+<button><a href="student">Back</a></button>
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center">Notices List</h2>
+            <table border="1"> 
+                <thead >
+                    <tr>
+                        <th>ID</th>
+                        <th>Notice Title</th>
+                        <th>Description</th>
+                        
+                    </tr>
+                    <tbody>
+                        {% for nts in Notices %}
+                        <tr>
+                            <td>
+                                {{nts.id}}
+                            </td>
+                            <td>
+                                {{ nts.notice_title}}
+                            </td>
+                            <td>
+                                {{ nts.description_data}}
+                            </td>
+                        </tr>
+                        
+                        
+                            
+                        {% endfor %}
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+    
+{% endblock %}

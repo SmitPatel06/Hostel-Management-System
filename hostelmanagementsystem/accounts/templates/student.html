@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student</title>
+</head>
+<style>
+    body{
+        background-image: url("https://wallpapercave.com/wp/wp3616323.jpg");
+    }
+</style>
+<body style="background-color: beige;">
+    <button><a href="mainpage">Back</a></button>
+    <form action="student" method="POST">
+        {% csrf_token %}
+        <h1 style="background-color: aqua;text-align: center;">Hostel Management System </h1>
+        <hr style="width:100%;color: darkred;">
+        <h2>Welcome Student!</h2>
+        <h2>You Can See Your Payment Details and The General Notice!</h2>
+        
+        <h2><a href="payment">Payment</a></h2>
+        <h2><a href="getnotice">General Notice List</a></h2><br>
+
+    </form>
+    
+</body>
+</html>

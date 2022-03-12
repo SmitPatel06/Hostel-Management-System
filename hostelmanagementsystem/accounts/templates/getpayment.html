@@ -1,0 +1,62 @@
+<style>
+    *{
+        background-image: url("https://i.pinimg.com/originals/a1/0a/56/a10a56cb385d86c6bb9e54da08a947f0.jpg");
+    }
+</style>
+
+
+{% block content %}
+<button><a href="adminback">Back</a></button>
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center">Payment List</h2>
+            <table border="1"> 
+                <thead >
+                    <tr>
+                        
+                        <th>ID</th>
+                        <th>Payment Year</th>
+                        <th>Amount</th>
+                        <th>Payment Type</th>
+                        <th>Payment Details</th>
+                        <th>Room No.</th>
+                        <th>Payment Date</th>
+                    </tr>
+                    <tbody>
+                        {% for nts in Payments %}
+                        <tr>
+                            
+                            <td>
+                                {{ nts.id}}
+                            </td>
+                            <td>
+                                {{ nts.p_year}}
+                            </td>
+                            <td>
+                                {{ nts.p_amount}}
+                            </td>
+                            <td>
+                                {{ nts.p_type}}
+                            </td>
+                            <td>
+                                {{ nts.p_details}}
+                            </td>
+                            <td>
+                                {{ nts.p_roomno}}
+                            </td>
+                            <td>
+                                {{ nts.created_date}}
+                            </td>
+                            
+                        </tr>
+                        
+                        
+                            
+                        {% endfor %}
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+    
+{% endblock %}

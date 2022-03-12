@@ -1,0 +1,54 @@
+<style>
+    *{
+        background-image: url("https://i.pinimg.com/originals/a1/0a/56/a10a56cb385d86c6bb9e54da08a947f0.jpg");
+    }
+</style>
+{% block content %}
+    <button><a href="adminback">Back</a></button>
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center">Room Details</h2>
+            <table border="1"> 
+                <thead >
+                    <tr>
+                        
+                        <th>Room No</th>
+                        <th>Student Name</th>
+                        <th>Last Name</th>
+                        <th>Semester</th>
+                        <th>Branch</th>
+                        
+                    </tr>
+                    <tbody>
+                        {% for nts in Addroom %}
+                        <tr>
+                            
+                            <td>
+                                {{ nts.s_room}}
+                            </td>
+                            <td>
+                                {{ nts.s_name}}
+                            </td>
+                            <td>
+                                {{ nts.s_surname}}
+                            </td>
+                            <td>
+                                {{ nts.s_sem}}
+                            </td>
+                            <td>
+                                {{ nts.s_branch}}
+                            </td>
+                            
+                            
+                        </tr>
+                        
+                        
+                            
+                        {% endfor %}
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+    
+{% endblock %}

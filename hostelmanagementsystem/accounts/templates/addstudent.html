@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+	<link rel="stylesheet" >
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <title>Apply</title>
+</head>
+<style>
+	body{
+		background-image: url("https://wallpapermemory.com/uploads/394/black-wallpaper-full-hd-54043.jpg");
+	}
+</style>
+<body>
+    <button><a href="mainpage">Back</a></button>
+    <form action="addstudent" method="POST" class="form">
+        {% csrf_token %}
+        <h1 style="background-color: aqua; text-align: center; height: 40px;"> Hostel Management System </h1>
+        <hr style="width:100%;color: darkred;">
+		<table border="1" align="center" style="background-color:aqua; margin-top: 50px;">
+		
+			<tr>
+				<td>
+					<label for="studentname">Student Name </label>
+				</td>
+				<td>
+					<input type="text" name = "studentname" placeholder="Enter Your Name"  value = "" id="studentname"required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="fathername">Father Name </label>
+				</td>
+				<td>
+					<input type="text" name = "fathername" placeholder="Enter Father Name" value = "" id="fathername" required>
+
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<label for="birthdate"> Birth Date</label>
+				</td>
+				<td>
+					<input type="date" name="birthdate" value="" id="birthdate">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="gender">Gender  </label>
+										
+				</td>
+				<td>
+					<input type="radio" id="male" name="gender" value="male">
+					<label for="male">Male</label><br>
+					<input type="radio" id="female" name="gender" value="female">
+					<label for="female">Female</label><br>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="mobileno">Student Mobile No.  </label>
+				</td>
+				<td>
+
+				<input type="text" name="mobileno"  placeholder="Enter Phone Number" >
+				</td>
+			</tr>
+			<tr>
+                <td>
+					<label for="branch">Student Branch  </label>
+                    	
+                </td>
+                <td colspan="2" >
+                  	<select name="branch" required autocomplete = "off" >
+                    <!-- <option value=""></option> -->
+                    <option value="CE">CE</option>
+                    <option value="MH">MH</option>
+                    <option value="IT">IT</option>
+                    <option value="EC">EC</option>
+                    <option value="CH">CH</option>
+			        <option value="MEDICAL">MEDICAL</option>
+                    <option value="DENTAL">DENTAL</option>
+					</select>
+                </td>
+            </tr>
+            <tr>
+            	<td>
+            		<label for="age">Student Age  </label>
+            	</td>
+            	<td>
+            		<input type="text" name="age" placeholder="Enter Your Age">
+            	</td>
+            </tr>
+			<tr>
+            	<td>
+            		<label for="area">Address Area  </label>
+            	</td>
+            	<td>
+            		<input type="text" name="area" placeholder="Enter Address">
+            	</td>
+            </tr>
+            <tr>
+            	<td>
+            		<label for="city">Address City </label>
+            	</td>
+            	<td>
+            		<input type="text" name="city" placeholder="Enter City">
+            	</td>
+            </tr>
+             <tr>
+            	<td>
+            		<label for="state">Address Stste </label>
+            	</td>
+            	<td>
+            		<input type="text" name="state" placeholder="Enter State">
+            	</td>
+            </tr>
+			 <tr>
+            	<td>
+            		<label for="email">Students Email </label>
+            	</td>
+            	<td>
+            		<input type="text" name="email" placeholder="Enter Email Address">
+            	</td>
+            </tr>
+            <tr>
+                <td>
+					<label for="semester">Semester  </label>
+                    	
+                </td>
+                <td colspan="2" >
+                  	<select name="semester" required autocomplete = "off"  >
+                    <!-- <option value=""></option> -->
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+			        <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+
+					</select>
+                </td>
+            </tr>
+			<tr align="center">
+				<td colspan="2">
+					<input type="submit" name="submit">
+				</td>
+			</tr>			
+
+			
+		</table>
+    </form>
+</body>
+</html>

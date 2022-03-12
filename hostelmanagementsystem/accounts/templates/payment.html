@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url("https://lh3.googleusercontent.com/cr7K6PldpbO7M6P6UHX2LbDm_vjd2Jtui8d72N1n0PGU3drhtjxjofJwqzEnbXXKcjvwpA=s151");
+    }
+
+    table{
+        height: 500px;
+        width: 800px;
+    }
+</style>
+<body>
+    <form action="addpayment" method="POST">
+        {% csrf_token %}
+        <h1 style="text-align: center; background-color: aqua;">Fee Payment</h1>
+        <table align="center" border="1" style="background-color: lightseagreen;"> 
+            <tr>
+                <td align="center">
+                    <label for="year">Year </label>
+                    
+                </td>
+                <td>
+                    <select name="year"  required autocomplete = "off">
+						<!-- <option value=""></option> -->
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <label for="amount">Amount </label>
+                </td>
+                <td>
+                    <input type="number" name="amount" placeholder="Enter The Amount">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <label for="paytype">Payment Type </label>
+                </td>
+                <td>
+                    <select name="paytype" required autocomplete = "off"  >
+                        <!-- <option value=""></option> -->
+                        <option value="case">Case</option>
+                        <option value="check">Check</option>
+                        <option value="neft">NEFT</option>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <label for="paydetails">Payment Details </label>
+                </td>
+                <td>
+                    <textarea name="paydetails" rows="4" cols="50" placeholder="Add Payment Details"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <label for="roomno">Room No. </label>
+                </td>
+                <td>
+                    <input type="number" name="roomno" id="roomno" placeholder="Enter Your Roomno">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+					<label for="paymentdate"> Payment Date</label>
+				</td>
+				<td>
+					<input type="date" name="paymentdate" value="" id="paymentdate">
+				</td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <input type="submit" value="Save" name="submit">
+                </td>
+                <td>
+                    <input type="reset" value="Reset" name="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

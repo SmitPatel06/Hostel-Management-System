@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <title>Registration</title>
+</head>
+
+<style>
+    h2{
+        margin-top: 60px;
+        margin-left: 620px;
+    }
+    table{
+        height: 250px;
+        width: 500px;
+    }
+    body{
+        background-color: lightseagreen;
+    }
+    img{
+        height: 180px;
+        margin-bottom: 70px;
+    }
+
+
+</style>
+
+
+    <h1 align="center" class="h1" style=" background-color:white;"> Hostel Management System</h1>        
+    <div class="header" style="margin-left: 660px;">
+            <img src="https://thumbs.dreamstime.com/b/vector-logo-hostel-hotel-183952389.jpg" style="margin-left: 0px;">
+        </div>
+    <form action="register" method="POST">
+        
+        <table border="1" align="center" style="background-color: pink;">
+            {% csrf_token %}
+            <tr align="center">
+                <td bgcolor="pink" style="color:red;">
+                    First name:
+                </td>
+                <td>
+                    <input type="text" name="first_name" placeholder="First Name">
+                </td>
+            </tr>
+            <tr align="center">
+                <td bgcolor="pink" style="color:red;">
+                    Last Name:
+                </td>
+                <td>
+                    <input type="text" name="last_name" placeholder="Last Name"><br>
+                </td>
+            </tr>
+            <tr align="center">
+                <td bgcolor="pink" style="color:red;">
+                    User Name:
+                </td>
+                <td>
+                    <input type="text" name="username" placeholder="Username">
+                </td>
+            </tr>
+            <tr align="center">
+                <td bgcolor="pink" style="color:red;">
+                    Email:
+                </td>
+                <td>
+                    <input type="email" name="email" placeholder="email">
+                </td>
+            </tr>
+            <tr align="center">
+                <td bgcolor="pink" style="color:red;">
+                    Password
+                </td>
+                <td>
+                    <input type="password" name="password1" placeholder="Password"><br>
+                </td>
+            </tr>
+            <tr align="center">
+                <td bgcolor="pink" style="color:red;">
+                
+                
+                    Conform Password
+                </td>
+                <td>
+                    <input type="password" name="password2" placeholder="Confirm Password"><br>
+                </td>
+            </tr>
+            <tr align="center">
+                <td bgcolor="pink" style="color:red;" colspan="2">
+                    <input type="submit" name="submit">&nbsp;&nbsp;&nbsp;
+                    <input type="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <body>
+        <div>
+            {% for message in messages %}
+            <h3>
+                {{message}}
+            </h3>
+            {% endfor %}
+        </div>
+    <h2 style="margin-left: 550px;">If you want to login <a href="login">click here</a> for login.</h2> 
+    
+</body>
+</html>

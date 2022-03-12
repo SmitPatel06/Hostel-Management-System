@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    
+    <link rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url("https://lh3.googleusercontent.com/5vPk192vFXPnaOzplFY7rkqh9RE41dTEP3vuQhg9EBY3vBlRELrj7F_aTrEqyopMCg3rmg=s151");
+        background-color: #f5f5f5;
+    }
+    table{
+        height: 250px;
+        width: 500px;
+    }
+    img{
+        height: 180px;
+        margin-bottom: 70px;
+    }
+
+</style>
+<body>
+    
+   
+    <div class="header">
+        <img src="https://thumbs.dreamstime.com/b/vector-logo-hostel-hotel-183952389.jpg" style="margin-left: 650px;">
+    </div>
+    
+        <form action="login" method="POST">
+            {% csrf_token %}
+            
+        
+            
+            <table align="center" border="1" style="color:navy;background-color: aqua; margin-top: 10px;"> 
+                {% csrf_token %}
+                <tr style="background-color: gray;">
+                    <td align="center" colspan="2">
+                        <h1>Login</h1>
+                    </td>
+                    
+                <tr>
+                    
+                    <td>
+                        <i class="fas fa-user"></i>
+                    </td>
+                    <td>
+                        <input type="text" name="username" placeholder="username" >
+                    </td>
+                </tr>
+                <tr >
+                    
+                    <td>
+                        <i class="fas fa-lock"></i>
+                    </td>
+                    <td>
+                        <input type="password" name="password" placeholder="password" >
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2">
+                        <input type="submit" name="submit" ><a href="mainpage.html"></a>
+                    </td>
+                </tr>
+
+
+
+            </table>
+            
+            
+
+        </form>
+    
+
+    <div>
+        {% for message in messages %}
+        <h3>
+            {{message}}
+        </h3>
+        {% endfor %}
+    </div>
+</body>
+</html>

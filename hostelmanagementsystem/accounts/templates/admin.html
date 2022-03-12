@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" >
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <title>Admin Page</title>
+</head>
+<style>
+    body{
+        background-image: url("https://i.pinimg.com/originals/4d/55/61/4d5561a98fe7d21e8cbbdf5d87675050.jpg");
+    }
+</style>
+<body>
+    <button><a href="admin">Back</a></button>
+    <form action="admin" method="POST">
+        {% csrf_token %}
+        <h1 style="background-color: aqua;text-align: center;">Hostel Management System </h1>
+        <hr style="width:100%;color: darkred;">
+        <h3><a href="getroomdetails" name="getroomdetails" style="margin-left: 690px;">Room detail</a></h3>
+        <h3><a href="addrooms" style="margin-left: 690px;">Allote Room</a></h3>
+        <h3><a href="getpaymentdetails" style="margin-left: 690px;">Payment Details</a></h3>
+        <h3><a href="getstudentdetails" style="margin-left: 690px;">Student detail</a></h3>
+        <h3><a href="notice" style="margin-left: 690px;">General Notice</a></h3>
+    </form>
+    
+</body>
+</html>

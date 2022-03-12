@@ -1,0 +1,85 @@
+<style>
+    *{
+        background-image: url("https://i.pinimg.com/originals/a1/0a/56/a10a56cb385d86c6bb9e54da08a947f0.jpg");
+    }
+</style>
+
+{% block content %}
+<button><a href="adminback">Back</a></button>
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center">Student List</h2>
+            <table border="1"> 
+                <thead >
+                    <tr>
+                        
+                        <th>Student Name</th>
+                        <th>Father Name</th>
+                        <th>Birthdate</th>
+                        <th>Gender</th>
+                        <th>Mobile No</th>
+                        <th>Branch</th>
+                        <th>Age</th>
+                        <th>Area</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Email</th>
+                        <th>Semester</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                    <tbody>
+                        {% for nts in Student %}
+                        <tr>
+                            
+                            <td>
+                                {{ nts.student_name}}
+                            </td>
+                            <td>
+                                {{ nts.f_name}}
+                            </td>
+                            <td>
+                                {{ nts.b_date}}
+                            </td>
+                            <td>
+                                {{ nts.s_gender}}
+                            </td>
+                            <td>
+                                {{ nts.mobile_no}}
+                            </td>
+                            <td>
+                                {{ nts.branch}}
+                            </td>
+                            <td>
+                                {{ nts.s_age}}
+                            </td>
+                            <td>
+                                {{ nts.add_area}}
+                            </td>
+                            <td>
+                                {{ nts.add_city}}
+                            </td>
+                            <td>
+                                {{ nts.add_state}}
+                            </td>
+                            <td>
+                                {{ nts.s_email}}
+                            </td>
+                            <td>
+                                {{ nts.s_sem}}
+                            </td>
+                            <td>
+                                <a href="deleterecord/{{ nts.id }}">Delete</a>
+                            </td>
+                        </tr>
+                        
+                        
+                            
+                        {% endfor %}
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+    
+{% endblock %}
